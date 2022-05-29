@@ -18,7 +18,7 @@ from sklearn.ensemble import ExtraTreesRegressor
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html', {'name':'moni'});
+    return render(request, 'home.html', {'name':'pulkit'});
 
 # def get_graph():
 #     buffer = BytesIO()
@@ -100,8 +100,8 @@ def add(request):
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=0)
 
 
-    from sklearn.linear_model import LinearRegression
-    regressor=LinearRegression()
+    from sklearn.ensemble import RandomForestRegressor
+    regressor=RandomForestRegressor()
     regressor.fit(X_train,Y_train)
 
 
